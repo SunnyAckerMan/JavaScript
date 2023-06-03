@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Keywords</title>
+  </head>
+  <body>
+    <h3>Keyword Description</h3>
+
+    <p id="Var"></p>
+    <button type="button" onclick="varFunction('Var')">Var</button>
+    <p id="let"></p>
+    <button type="button" onclick="varFunction('let')">Let</button>
+    <p id="const"></p>
+    <button type="button" onclick="varFunction('const')">Const</button>
+    <p id="if"></p>
+    <button type="button" onclick="varFunction('if')">If</button>
+    <p id="switch"></p>
+    <button type="button" onclick="varFunction('switch')">Switch</button>
+    <p id="for"></p>
+    <button type="button" onclick="varFunction('for')">For</button>
+    <p id="return"></p>
+    <button type="button" onclick="varFunction('return')">Return</button>
+    <p id="try"></p>
+    <button type="button" onclick="varFunction('try')">Try</button>
+
+    <script>
+      function varFunction(keyword) {
+        switch (keyword) {
+          case "Var":
+            document.getElementById("Var").innerHTML =
+              "var - Declares a variable";
+            break;
+          case "let":
+            document.getElementById("let").innerHTML =
+              "let - Declares a block variable";
+            break;
+          case "const":
+            document.getElementById("const").innerHTML =
+              "const - Declares a block constant";
+            break;
+          case "if":
+            document.getElementById("if").innerHTML =
+              "if - Marks a block of statements to be executed on a condition";
+            break;
+          case "switch":
+            document.getElementById("switch").innerHTML =
+              "switch - Marks a block of statements to be executed in different cases";
+            break;
+          case "for":
+            document.getElementById("for").innerHTML =
+              "for - Marks a block of statements to be executed in a loop";
+            break;
+          case "return":
+            document.getElementById("return").innerHTML =
+              "return - Exits a function";
+            break;
+          case "try":
+            document.getElementById("try").innerHTML =
+              "try - Implements error handling to a block of statements";
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
