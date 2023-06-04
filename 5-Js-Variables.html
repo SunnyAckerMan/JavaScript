@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portal using Variables</title>
+  </head>
+  <body>
+    <h1>Admin Portal using Variables</h1>
+    <div>
+      <p>Admin Name</p>
+      <input type="text" placeholder="admin name" id="adminNameInput" />
+      <p>Admin Password</p>
+      <input type="password" placeholder="password" id="passwordInput" />
+      <p></p>
+      <button id="submitButton">Submit</button>
+    </div>
+
+    <script>
+      const adminName = "Sunny";
+      const password = "admin123";
+
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function () {
+          const enteredAdminName =
+            document.getElementById("adminNameInput").value;
+          const enteredPassword =
+            document.getElementById("passwordInput").value;
+
+          if (enteredAdminName === adminName && enteredPassword === password) {
+            // Perform actions when the entered admin name and password match the predefined values
+            alert("Login successful!");
+          } else {
+            // Perform actions when the entered admin name or password is incorrect
+            alert("Invalid admin name or password!");
+          }
+        });
+    </script>
+  </body>
+</html>
