@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <label for="fname">First Number:</label><br />
+    <input type="number" class="dummy_firstNumber" name="fname" /><br />
+    <label for="lname">Last Number:</label><br />
+    <input type="number" class="dummy_lastNumber" name="lname" /><br /><br />
+    <div>
+      <button id="dummy_add">+</button>
+      <button id="dummy_sub">-</button>
+      <button id="dummy_mul">*</button>
+      <button id="dummy_div">/</button>
+    </div>
+    <br />
+    <p id="result">0</p>
+    <script>
+      // Get the necessary elements
+      let firstNumber = document.querySelector(".dummy_firstNumber");
+      let lastNumber = document.querySelector(".dummy_lastNumber");
+      let addButton = document.querySelector("#dummy_add");
+      let subtractButton = document.querySelector("#dummy_sub");
+      let multiplyButton = document.querySelector("#dummy_mul");
+      let divideButton = document.querySelector("#dummy_div");
+      let resultParagraph = document.querySelector("#result");
+
+      // Add event listeners to the buttons
+      addButton.addEventListener("click", function () {
+        const num1 = parseFloat(firstNumber.value);
+        const num2 = parseFloat(lastNumber.value);
+        const result = num1 + num2;
+        resultParagraph.textContent = result;
+      });
+
+      subtractButton.addEventListener("click", function () {
+        const num1 = parseFloat(firstNumber.value);
+        const num2 = parseFloat(lastNumber.value);
+        const result = num1 - num2;
+        resultParagraph.textContent = result;
+      });
+
+      multiplyButton.addEventListener("click", function () {
+        const num1 = parseFloat(firstNumber.value);
+        const num2 = parseFloat(lastNumber.value);
+        const result = num1 * num2;
+        resultParagraph.textContent = result;
+      });
+
+      divideButton.addEventListener("click", function () {
+        const num1 = parseFloat(firstNumber.value);
+        const num2 = parseFloat(lastNumber.value);
+        const result = num1 / num2;
+        resultParagraph.textContent = result;
+      });
+    </script>
+  </body>
+</html>
